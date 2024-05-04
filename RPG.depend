@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1714825761 source:c:\info\c\rpg\main.cpp
+	<iostream>
+	<fstream>
+	<list>
+	"Stocare.h"
+	"Arme.h"
+	"Monstru.h"
+	"Reguli.h"
+	"Character.h"
+	"Inventar.h"
+	"MyAvatar.h"
+
+1714822175 c:\info\c\rpg\stocare.h
+	<string>
+	<iostream>
+
+1714822604 source:c:\info\c\rpg\stocare.cpp
+	"Stocare.h"
+	<fstream>
+
+1714822688 source:c:\info\c\rpg\arme.cpp
+	"Arme.h"
+
+1714822626 c:\info\c\rpg\arme.h
+	<iostream>
+	<string>
+
+1714823197 source:c:\info\c\rpg\monstru.cpp
+	"Stocare.h"
+	"Arme.h"
+	"Monstru.h"
+
+1714823143 c:\info\c\rpg\monstru.h
+	<iostream>
+	<string>
+
+1714823393 source:c:\info\c\rpg\reguli.cpp
+	"Reguli.h"
+
+1714823393 c:\info\c\rpg\reguli.h
+	<iostream>
+	<string>
+
+1714823723 source:c:\info\c\rpg\character.cpp
+	"Character.h"
+
+1714823736 c:\info\c\rpg\character.h
+	<iostream>
+	<string>
+	"Arme.h"
+
+1714824653 source:c:\info\c\rpg\myavatar.cpp
+	"MyAvatar.h"
+	"Character.h"
+	"Arme.h"
+
+1714824548 c:\info\c\rpg\myavatar.h
+	"Character.h"
+
+1714825956 c:\info\c\rpg\inventar.h
+	<iostream>
+	<string>
+	"Character.h"
+	"MyAvatar.h"
+
+1714825956 source:c:\info\c\rpg\inventar.cpp
+	<list>
+	"Character.h"
+	"Inventar.h"
+
