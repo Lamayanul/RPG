@@ -32,6 +32,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Arme.cpp" />
+		<Unit filename="Arme.h" />
+		<Unit filename="Character.cpp" />
+		<Unit filename="Character.h" />
+		<Unit filename="Inventar.cpp" />
+		<Unit filename="Inventar.h" />
+		<Unit filename="Monstru.cpp" />
+		<Unit filename="Monstru.h" />
+		<Unit filename="MyAvatar.cpp" />
+		<Unit filename="MyAvatar.h" />
+		<Unit filename="Reguli.cpp" />
+		<Unit filename="Reguli.h" />
+		<Unit filename="Stocare.cpp" />
+		<Unit filename="Stocare.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

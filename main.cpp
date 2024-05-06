@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <list>
+#include <cstdlib>
 #include "Stocare.h"
 #include "Arme.h"
 #include "Monstru.h"
@@ -134,39 +135,112 @@ class Market
 class gameplay
     {
 
+    Inventar inv;
+    MyAvatar avatar;
+    Monstru monstru;
     public:
-       void rundaLuptei(MyAvatar &avatar, Monstru &monstru) {
-        bool randulAvatarului = true; // Indicator pentru a ține evidența a cui este rândul de a ataca
+        gameplay(Inventar& inventar,MyAvatar& _avatar,Monstru& _monstru) : inv(inventar),avatar(_avatar),monstru(_monstru) {}
+        void rundaLuptei() {
+        bool randulAvatarului = true;
 
         while (avatar.isAlive() && monstru.isAlive())
             {
+            int random = rand() % 100 + 1;
+            int random1 = rand() % 100 + 1;
             if (randulAvatarului)
             {
-               monstru.getHealth()=monstru.getHealth()-avatar.getArma().getAttack();
+                cout<<"-------------\n";
+                cout<<"Stat-uri monstru: \n";
+                cout<<"-------------\n";
+                monstru.info();
+                getchar();
+                if(monstru.evita(monstru.getSpeed())<=random1)
+                {
+                monstru.getHealth()=monstru.getHealth()-monstru.getArma().getAttack();
+                }
+                else
+                {
+                cout<<"Monstrul a evitat atacul.\n";
+                }
             }
             else
             {
+                cout<<"-------------\n";
+                cout<<"Stat-uri erou: \n";
+                cout<<"-------------\n";
+                avatar.info();
+                getchar();
+                if(avatar.evita(avatar.getSpeed())<=random)
+                {
                 avatar.getHealth()-=monstru.getArma().getAttack();
+                }
+                else
+                {
+                cout<<"Eroul a evitat atacul.\n";
+                }
+                cout<<"Deschizi inventarul?";
+            string raspuns;
+            cin>>raspuns;
+            if(raspuns=="y")
+            {
+                {
+                bool exit=false;
+                while(!exit)
+                {
+                    cout<<"1.Afiseaza parametrii jucator\n";
+                    cout<<"2.Foloseste portiuni de viata\n";
+                    cout<<"3.Foloseste portiuni de mana\n";
+                    int optiune2;
+                    cin>>optiune2;
+                    string raspuns2;
+                    switch(optiune2)
+                    {
+                    case 1:
+                        {
+                            cout<<inv.verifica_stare();
+                            cout<<"\nnInchideti inventarul?";
+                            cin>>raspuns2;
+                            if(raspuns2=="y")
+                                exit=true;
+                            break;
+                        }
+                    case 2:
+                        {
+                            inv.aplica_viata();
+                            cout<<"\nInchideti inventarul?";
+                            cin>>raspuns2;
+                            if(raspuns2=="y")
+                                exit=true;
+                            break;
+                        }
+                    case 3:
+                        {
+                            inv.aplica_mana();
+                            cout<<"\nInchideti inventarul?";
+                            cin>>raspuns2;
+                            if(raspuns2=="y")
+                                exit=true;
+                            break;
+                      }
+                    }
+                  }
+                }
             }
 
-            // Verificați dacă unul dintre participanți a fost învins
+            }
+
+
             if (!monstru.isAlive()) {
                 cout << "Monstrul a fost invins!" << endl;
                 break;
             } else if (!avatar.isAlive()) {
                 cout << "Avatarul a fost invins!" << endl;
                 break;
+
             }
 
-            randulAvatarului = !randulAvatarului; // Schimbați rândul de atac pentru următoarea rundă
-            cout<<"Stat-uri monstru: \n";
-            cout<<"-------------\n";
-            monstru.info();
-            cout<<"-------------\n";
-            cout<<"Stat-uri erou: \n";
-            cout<<"-------------\n";
-            avatar.info();
-            cout<<"-------------\n";
+            randulAvatarului = !randulAvatarului;
+
             getchar();
         }
     }
@@ -174,12 +248,13 @@ class gameplay
 
 int main() {
     Stocare stocare;
+    Reguli regula;
     bool erouSelectat = false;
     string poveste;
     MyAvatar myAvatar(Character("", 0, 0, 0, 0,0, Arme("", "", 0, 0, 0)));
     cout<<"*******************************************************************************************\n";
     cout << "Bine ai venit in lumea jocului de rol!\n";
-    Reguli regula;
+
     regula.info();
     cout<<"*******************************************************************************************\n";
     cout <<"Introdu un nume: ";
@@ -247,7 +322,7 @@ int main() {
                     cout<<"1.Afiseaza parametrii jucator\n";
                     cout<<"2.Foloseste portiuni de viata\n";
                     cout<<"3.Foloseste portiuni de mana\n";
-                    int optiune2;
+
                     cin>>optiune;
                     string raspuns2;
                     switch(optiune)
@@ -315,17 +390,16 @@ int main() {
                 cout<<"Selectezi pudurea? ";
                 string raspuns;
                 cin>>raspuns;
-               /* if(raspuns=="y")
+               if(raspuns=="y")
                 {
-                    sigur=true;
-                }*/
                 poveste = "A aparut un monstru\n";
                 cout<<poveste;
                 stocare.salvarePoveste(poveste);
                 Monstru monstru("orc",90,0,15,10,2,Arme("secure","comun",15,1,1));
-                gameplay primaRunda;
-                primaRunda.rundaLuptei(myAvatar,monstru);
-                sigur=true;
+                gameplay primaRunda(inventar,myAvatar,monstru);
+                primaRunda.rundaLuptei();
+                }
+
                 break;
             }
         case 2:
@@ -339,6 +413,7 @@ int main() {
                 cin>>raspuns;
                 if(raspuns == "y")
                 {
+                    cout<<"Se vede in departare un market... \n";
                 while(!exit)
                 {
 
@@ -348,7 +423,7 @@ int main() {
                     sigur=true;
                 }*/
                 Market marc(inventar);
-                cout<<"Se vede in departare un market... \n";
+
                 marc.Cumpara();
                 cout<<"Vrei sa iesi din magazin?\n";
                 cin>>raspuns;
@@ -356,7 +431,7 @@ int main() {
                     exit=true;
                 }
                 }
-                sigur=true;
+
                 break;
             }
             case 3:
@@ -399,11 +474,12 @@ int main() {
                                 exit=true;
                             break;
                       }
+
                     }
                   }
                 }
               }
-              cout<<"ana";
+              cout<<"Te-a prins Ana!";
             }
           }
 

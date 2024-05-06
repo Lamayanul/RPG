@@ -13,14 +13,18 @@ class Monstru
     int speed;
     int nivel;
     Arme arma;
+
 public:
     Monstru(string nu, int h, int m, int s, int ss,int n,Arme a) :nume(nu), health(h), mana(m), strength(s), speed(ss),nivel(n),arma(a) {}
 
     void info();
 
+    int evita(int speed);
+
     bool isAlive();
 
     Arme getArma() ;
+
     int& getHealth();
 
     int& getMana();

@@ -5,7 +5,25 @@
     {
         Character::info();
     }
-    void MyAvatar::schimbaArma(Arme a) {
+
+    int MyAvatar::evita(int speed)
+    {
+         float sansa = 0.0;
+         if (speed >= 100)
+         {
+             sansa = 100.0;
+         }
+         else
+         {
+             sansa = speed / 4.0;
+         }
+
+
+    return (sansa < 100.0) ? sansa : 100.0;
+    }
+
+    void MyAvatar::schimbaArma(Arme a)
+    {
         arma = a;
     }
     bool MyAvatar::isAlive()

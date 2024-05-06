@@ -7,7 +7,7 @@ public:
     void info() ;
     void schimbaArma(Arme a);
     bool isAlive();
-
+    int evita(int speed);
     Arme getArma();
 
     int& getHealth();

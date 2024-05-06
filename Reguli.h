@@ -6,7 +6,7 @@ using namespace std;
 class Reguli
 {
 public:
-    int info();
+    void info();
 
 };
 

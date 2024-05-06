@@ -9,6 +9,21 @@ void Monstru::info()
         cout << "speed: " << speed << endl;
         cout << "nivel: " <<nivel <<endl;
     }
+    int Monstru::evita(int speed)
+    {
+         float sansa = 0.0;
+         if (speed >= 100)
+         {
+             sansa = 100.0;
+         }
+         else
+         {
+             sansa = speed / 4.0;
+         }
+
+
+    return (sansa < 100.0) ? sansa : 100.0;
+    }
 bool Monstru::isAlive()
     {
         return health>0;
