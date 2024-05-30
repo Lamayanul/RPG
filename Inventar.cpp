@@ -46,10 +46,11 @@
     auto it = portiune_viata.begin();
     advance(it, raspuns3-1);
     int viataInventar = *it;
-    int viataAvatar = avatar.getHealth();
+    int& viataAvatar = avatar.getHealth();
     int viataNoua = viataAvatar + viataInventar;
     avatar.getHealth() = viataNoua;
     portiune_viata.erase(it);
+    return avatar.getHealth();
     }
 
     int Inventar:: aplica_mana()
@@ -63,9 +64,10 @@
     auto it = portiune_mana.begin();
     advance(it, raspuns4-1);
     int ManaInventar = *it;
-    int ManaAvatar = avatar.getMana();
+    int& ManaAvatar = avatar.getMana();
     int ManaNoua = ManaAvatar + ManaInventar;
     avatar.getMana() = ManaNoua;
     portiune_mana.erase(it);
+    return avatar.getMana();
     }
 

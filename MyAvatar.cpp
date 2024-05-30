@@ -51,6 +51,10 @@
     {
         return nivel;
     }
+    int& MyAvatar::getStrength()
+    {
+        return strength;
+    }
 
 
 

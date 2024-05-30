@@ -1,11 +1,11 @@
 #include "Character.h"
 void Character::info()
     {
-        cout << "health: " << health << endl;
-        cout << "mana: " << mana << endl;
-        cout << "strength: " << strength << endl;
-        cout << "speed: " << speed << endl;
-        cout << "nivel: " <<nivel <<endl;
+        cout << "Viata: " << health << endl;
+        cout << "Mana: " << mana << endl;
+        cout << "Puterea: " << strength << endl;
+        cout << "Viteza: " << speed << endl;
+        cout << "Nivel: " <<nivel <<endl;
 
 
     }
@@ -25,3 +25,7 @@ int& Character::getNivel()
     {
         return nivel;
     }
+int& Character::getStrength()
+{
+    return strength;
+}

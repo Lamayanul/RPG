@@ -69,7 +69,7 @@
 	"Character.h"
 	"Inventar.h"
 
-1715028554 source:c:\info\c\rpg\joc-rpg\rpg\rpg\main.cpp
+1717037110 source:c:\info\c\rpg\joc-rpg\rpg\rpg\main.cpp
 	<iostream>
 	<fstream>
 	<list>
@@ -86,7 +86,7 @@
 	<string>
 	<iostream>
 
-1714822626 c:\info\c\rpg\joc-rpg\rpg\rpg\arme.h
+1717017936 c:\info\c\rpg\joc-rpg\rpg\rpg\arme.h
 	<iostream>
 	<string>
 
@@ -98,7 +98,7 @@
 	<iostream>
 	<string>
 
-1714823736 c:\info\c\rpg\joc-rpg\rpg\rpg\character.h
+1717001315 c:\info\c\rpg\joc-rpg\rpg\rpg\character.h
 	<iostream>
 	<string>
 	"Arme.h"
@@ -109,16 +109,16 @@
 	"Character.h"
 	"MyAvatar.h"
 
-1715026327 c:\info\c\rpg\joc-rpg\rpg\rpg\myavatar.h
+1717001329 c:\info\c\rpg\joc-rpg\rpg\rpg\myavatar.h
 	"Character.h"
 
-1714996321 source:c:\info\c\rpg\joc-rpg\rpg\rpg\arme.cpp
+1717035353 source:c:\info\c\rpg\joc-rpg\rpg\rpg\arme.cpp
 	"Arme.h"
 
-1714823723 source:c:\info\c\rpg\joc-rpg\rpg\rpg\character.cpp
+1717035353 source:c:\info\c\rpg\joc-rpg\rpg\rpg\character.cpp
 	"Character.h"
 
-1714825956 source:c:\info\c\rpg\joc-rpg\rpg\rpg\inventar.cpp
+1717025493 source:c:\info\c\rpg\joc-rpg\rpg\rpg\inventar.cpp
 	<list>
 	"Character.h"
 	"Inventar.h"
@@ -128,12 +128,12 @@
 	"Arme.h"
 	"Monstru.h"
 
-1715026425 source:c:\info\c\rpg\joc-rpg\rpg\rpg\myavatar.cpp
+1717001315 source:c:\info\c\rpg\joc-rpg\rpg\rpg\myavatar.cpp
 	"MyAvatar.h"
 	"Character.h"
 	"Arme.h"
 
-1715025904 source:c:\info\c\rpg\joc-rpg\rpg\rpg\reguli.cpp
+1717035367 source:c:\info\c\rpg\joc-rpg\rpg\rpg\reguli.cpp
 	"Reguli.h"
 
 1714995497 source:c:\info\c\rpg\joc-rpg\rpg\rpg\stocare.cpp

@@ -24,6 +24,7 @@ public:
 
     int& getNivel();
 
+    int& getStrength();
 
 
 };
