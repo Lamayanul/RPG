@@ -1,13 +1,4 @@
-deniscavaler
+Deniscavaler
 Padure
 Selectezi padurea?(y/n)
  A aparut un monstru
-denisdeniscavaler
-Drum laturalnic
-Selectezi drum laturalnic?(y/n)
- Se vede in departare un market... 
-Vrei sa iesi din magazin?(y/n)
-Pe drumul tau, observi o pestera ascunsa in spatele unei cascade. Alegi sa intri?
-Continua pe drum.
-Ai ajuns la o fantana magica, care se zice ca reface viata si mana oricum bea din ea.
-Fantana este pazita de un baiat care iti cere 20 de banuti ca sa o folosesti, accepti?(y/n)Iti vezi de drumTe indepartezi tot mai mult de fantanaMergand, observi ca se innopteaza si pe drum dai de un han. Taxa pe noapte este de 30 de banuti. Langa han mai este un hambar, unde poti sta pe noapte, dar fara confort.Unde alegi sa stai pe noapte?(y/n)
